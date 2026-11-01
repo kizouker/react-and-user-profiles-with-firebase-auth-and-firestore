@@ -1,16 +1,18 @@
-import {AuthProvider} from './providers/AuthProvider';
-import {FirebaseProvider} from './providers/FirebaseProvider';
+export default App;
+import AuthProvider from './providers/AuthProvider';
+import FirebaseProviderMine from './providers/FirebaseProviderMine.jsx'
 import {RestOfTheApp} from './components/RestOfTheApp';
+
 import './App.css';
+
 
 export const App = () => {
   return (
-    <FirebaseProvider>
+    <FirebaseProviderMine>
       <AuthProvider>
         <RestOfTheApp />
       </AuthProvider>
-    </FirebaseProvider>
+    </FirebaseProviderMine>
   );
 };
 
-export default App;
